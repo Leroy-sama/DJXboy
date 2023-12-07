@@ -25,7 +25,51 @@
                 <img src="" alt="" />
             </div>
         </div>
+        <div class="about-cta">
+            <RouterLink to="/mixtapes">Explore Mixes</RouterLink>
+        </div>
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+    img {
+        width: 100%;
+    }
+
+    #about {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .intro {
+        background: linear-gradient(45deg, black, transparent), url(../assets/img/homepage-img1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .about-cta a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #7e1717;
+        padding: 1em 2em;
+        margin: 2em 0;
+    }
+
+    .about-cta a:hover {
+        border-bottom: 2px solid #7e1717;
+        border-top: 2px solid #7e1717;
+        background-color: #fff;
+        color: #7e1717;
+    }
+</style>

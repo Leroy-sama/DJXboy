@@ -14,7 +14,7 @@
                     <RouterLink to="/about">About</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/events">Events</RouterLink>
+                    <RouterLink to="/services">Services</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/mixtapes">MixTapes</RouterLink>

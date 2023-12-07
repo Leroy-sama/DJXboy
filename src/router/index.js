@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import AboutPage from "../pages/AboutPage.vue";
 import ContactPage from "../pages/ContactPage.vue";
-import EventsPage from "../pages/EventsPage.vue";
+import ServicesPage from "../pages/ServicesPage.vue";
 import HomePage from "../pages/HomePage.vue";
 import MixTapes from "../pages/MixTapes.vue";
 import NotFound from "../pages/NotFound.vue";
@@ -21,8 +21,8 @@ const routes = [
         component: AboutPage,
     },
     {
-        path: "/events",
-        component: EventsPage,
+        path: "/services",
+        component: ServicesPage,
     },
     {
         path: "/mixtapes",

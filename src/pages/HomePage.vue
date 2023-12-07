@@ -105,13 +105,18 @@
         line-height: 1.5;
     }
 
+    #home {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     .befits__img {
         display: grid;
         place-content: center;
     }
 
     .home__intro {
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
         justify-content: space-between;
         align-items: center;
