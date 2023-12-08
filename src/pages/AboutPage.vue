@@ -13,7 +13,7 @@
                         suscipit ratione reprehenderit illum amet iure. Ipsam
                         unde vitae pariatur nulla tenetur quibusdam quas sit?
                     </p>
-                    <img src=".../" alt="" />
+                    <img src="" alt="" />
                 </div>
                 <div class="other-about">
                     <p class="other-desc">
