@@ -1,49 +1,52 @@
+<script setup>
+    import {ref} from 'vue'
+
+    const validateForm = () => {}
+
+</script>
+
 <template>
     <section>
         <div class="foot__heading">
             <h1>Contact Me</h1>
         </div>
         <div class="contact__section">
-            <div class="contact__text">
-                <h3>Talk to Xboy</h3>
-                <ul>
-                    <li>
-                        <p>Please email email@gmail.com for event bookings</p>
-                    </li>
-                    <li>
-                        <p>Please contact Xboy at info@xboy.com</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="contact__form">
-                <h3>Contact Form</h3>
-                <form action="">
-                    <div class="form-control">
-                        <input type="text" id="name" placeholder="Name" />
-                    </div>
-                    <div class="form-control">
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Email Address"
-                        />
-                    </div>
-                    <div class="form-control">
-                        <input
-                            type="number"
-                            id="number"
-                            placeholder="Phone Number"
-                        />
-                    </div>
-                    <div class="form-control">
-                        <textarea
-                            name="message"
-                            id="message"
-                            rows="3"
-                        ></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
+            <div class="section__wrapper">
+                <div class="contact__text">
+                    <h3>Talk to Xboy</h3>                    
+                    <p>Please email email@gmail.com for event bookings</p>                      
+                    <p>Please contact Xboy at info@xboy.com</p>
+                </div>
+                <div class="contact__form">
+                    <h3>Contact Form</h3>
+                    <form action="" @submit.prevent="validateForm">
+                        <div class="form-control">
+                            <input type="text" id="name" placeholder="Name" />
+                        </div>
+                        <div class="form-control">
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Email Address"
+                            />
+                        </div>
+                        <div class="form-control">
+                            <input
+                                type="number"
+                                id="number"
+                                placeholder="Phone Number"
+                            />
+                        </div>
+                        <div class="form-control">
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -55,7 +58,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 400px;
+        height: 500px;
     }
 
     h1 {
@@ -65,10 +68,12 @@
         font-size: 3rem;
     }
 
-    .contact__section {
+    .section__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 2em 0;
+        max-width: 1200px;
+        margin: auto;
     }
 
     .form-control input,
@@ -80,9 +85,26 @@
         padding: 1em;
     }
 
+    button {
+        margin-top: 1em;
+        color: #eb1616;
+        font-size: 1rem;
+        background-color: white;
+        padding: 0.7em 1.5em;
+        cursor: pointer;
+        border: 2px solid #eb1616;
+    }
+
+    button:hover {
+        border: none;
+        border-bottom: 2px solid #eb1616;
+    }
+
     @media (max-width: 35em) {
-        .contact__section {
+        .section__wrapper {
             grid-template-columns: 1fr;
+            padding: 1em;
+            gap: 1.5em;
         }
     }
 </style>

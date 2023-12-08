@@ -3,7 +3,7 @@
         <div class="home__intro">
             <div class="home__text">
                 <h1 class="text__heading">
-                    Making unforgettable moments through music
+                    Making unforgettable moments through <span class="red">music</span>
                 </h1>
                 <p class="text__description">
                     Experience the magic of unforgettable moments, woven
@@ -55,9 +55,7 @@
                 <p class="testi__desc">
                     DJXboy exceeded our expectations, creating an incredible
                     vibe for our event. The music selection was spot-on,
-                    seamlessly transitioning from one track to the next. The
-                    atmosphere was electric, and our guests couldn't stop raving
-                    about the unforgettable experience. Highly recommended for
+                    seamlessly transitioning from one track to the next. Highly recommended for
                     anyone seeking a top-notch DJ.
                 </p>
                 <div class="details">
@@ -79,9 +77,7 @@
                 <p class="testi__desc">
                     Working with DJXboy was an absolute pleasure. Their
                     attention to detail and ability to read the crowd set the
-                    perfect tone for our wedding. The dance floor was packed all
-                    night, and the seamless mix of genres kept everyone
-                    entertained. We couldn't have asked for a better DJ to make
+                    perfect tone for our wedding. We couldn't have asked for a better DJ to make
                     our special day truly unforgettable.
                 </p>
                 <div class="details">
@@ -116,18 +112,12 @@
     }
 
     .home__intro {
-        /* height: 100vh; */
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 2em;
         gap: 2em;
-        /* margin: 1em 0; */
-        /* background: linear-gradient(30deg, black, transparent),
-            url(@/assets/img/homepage-img1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center; */
+        margin-bottom: 2em;
     }
 
     h1 {
@@ -140,17 +130,37 @@
         max-width: 400px;
     }
 
+    .red {
+        background-color: #eb1616;
+        color: white;
+    }
+    
+    .text__heading,
+    .text__description,
+    .benefits {
+        color: rgb(2, 2, 12);
+    }
+
+    .text__title {
+        padding-bottom: 1em;
+    }
+
+    .text__description {
+        margin: 1em 0;
+    }
+
     .cta__btn {
-        color: #7e1717;
+        color: #eb1616;
         background-color: white;
         padding: 0.5em 1.6em;
-        border: 1px solid #7e1717;
+        border: 1px solid #eb1616;
         cursor: pointer;
+        font-size: 1rem;
     }
 
     .cta__btn:hover {
         color: white;
-        background-color: #7e1717;
+        background-color: #eb1616;
     }
 
     .benefits {
@@ -182,6 +192,25 @@
         padding: 4em;
     }
 
+    .testimonial1,
+    .testimonial2,
+    .testimonial3 {
+        border: 1px solid #eb161680;
+        padding: 1.5em;
+        color: rgb(2, 2, 12);
+    }
+
+    .details {
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details .name {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
     .last__cta {
         display: flex;
         justify-content: center;
@@ -194,14 +223,45 @@
     }
 
     .last__btn {
-        color: #7e1717;
+        color: #eb1616;
         text-decoration: none;
         padding: 0.5em 1.6em;
-        border: 1px solid #7e1717;
+        border: 1px solid #eb1616;
     }
 
     .last__btn:hover {
         color: white;
-        background-color: #7e1717;
+        background-color: #eb1616;
+    }
+
+    @media (max-width: 35em) {
+        .image img {
+            display: none;
+        }
+        .benefit1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .benefit2 {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .testimonials {
+            grid-template-columns: 1fr;
+        }
+
+        .befits__text {
+            padding: 0
+        }
+
+        .testimonials {
+            padding: 1em;
+        }
+
+        .cta {
+            font-size: 1.5rem;
+        }
     }
 </style>

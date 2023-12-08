@@ -4,29 +4,41 @@
             <h1>About DJXboy</h1>
         </div>
         <div class="about__section">
-            <h2 class="question">Who am I?</h2>
-            <div class="main-about">
-                <p class="main-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quam, autem dignissimos qui placeat nemo dolorem suscipit
-                    ratione reprehenderit illum amet iure. Ipsam unde vitae
-                    pariatur nulla tenetur quibusdam quas sit?
-                </p>
-                <img src=".../" alt="" />
+            <div class="section__wrapper">
+                <h2 class="question">Who am I?</h2>
+                <div class="main-about">
+                    <p class="main-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, autem dignissimos qui placeat nemo dolorem
+                        suscipit ratione reprehenderit illum amet iure. Ipsam
+                        unde vitae pariatur nulla tenetur quibusdam quas sit?
+                    </p>
+                    <img src=".../" alt="" />
+                </div>
+                <div class="other-about">
+                    <p class="other-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Laborum enim, repellendus pariatur tempore assumenda
+                        voluptates, ducimus numquam cumque quod consequatur
+                        reprehenderit tenetur aliquam velit porro sequi nostrum
+                        laudantium quia ratione.
+                    </p>
+                    <img src="" alt="" />
+                </div>
+                <div class="other-about">
+                    <p class="other-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Earum consectetur eveniet ducimus, facere eaque possimus
+                        quis assumenda ab esse nesciunt. Explicabo doloribus
+                        optio saepe natus deserunt eius voluptate praesentium
+                        assumenda.
+                    </p>
+                    <img src="" alt="" />
+                </div>
+                <div class="about-cta">
+                    <RouterLink to="/mixtapes">Explore Mixes</RouterLink>
+                </div>
             </div>
-            <div class="other-about">
-                <p class="other-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum enim, repellendus pariatur tempore assumenda
-                    voluptates, ducimus numquam cumque quod consequatur
-                    reprehenderit tenetur aliquam velit porro sequi nostrum
-                    laudantium quia ratione.
-                </p>
-                <img src="" alt="" />
-            </div>
-        </div>
-        <div class="about-cta">
-            <RouterLink to="/mixtapes">Explore Mixes</RouterLink>
         </div>
     </section>
 </template>
@@ -41,8 +53,13 @@
         width: 100%;
         margin: auto;
     }
+
+    .section__wrapper {
+        padding: 1em;
+    }
     .intro {
-        background: linear-gradient(45deg, black, transparent), url(../assets/img/homepage-img1.jpg);
+        background: linear-gradient(45deg, black, transparent),
+            url(../assets/img/homepage-img1.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

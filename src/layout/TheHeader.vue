@@ -1,29 +1,45 @@
 <script setup>
-    const toggleNavMenu = () => {};
+    import { reactive } from "vue";
+
+    const state = reactive({
+        isActive: false,
+    });
+
+    const toggleNavMenu = () => {
+        state.isActive = !state.isActive;
+    };
+
+    const closeNavMenu = () => {
+        state.isActive = false
+    }
 </script>
 
 <template>
     <header>
         <nav>
             <RouterLink to="/" class="logo">DJXboy</RouterLink>
-            <ul class="nav-links">
+            <ul class="nav-links" :class="{ active: state.isActive }">
                 <li>
-                    <RouterLink to="/home">Home</RouterLink>
+                    <RouterLink to="/home" @click.native="closeNavMenu" >Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/about">About</RouterLink>
+                    <RouterLink to="/about" @click.native="closeNavMenu" >About</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/services">Services</RouterLink>
+                    <RouterLink to="/services" @click.native="closeNavMenu" >Services</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/mixtapes">MixTapes</RouterLink>
+                    <RouterLink to="/mixtapes" @click.native="closeNavMenu" >MixTapes</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/contact">Contact</RouterLink>
+                    <RouterLink to="/contact" @click.native="closeNavMenu" >Contact</RouterLink>
                 </li>
             </ul>
-            <div class="burger" @click="toggleNavMenu">
+            <div
+                class="burger"
+                @click="toggleNavMenu"
+                :class="{ active: state.isActive }"
+            >
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -37,22 +53,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2em;
+        padding: 1em;
     }
     nav ul li {
         list-style: none;
     }
 
     nav a {
-        color: #092635;
+        color: rgb(2, 2, 12);
         text-decoration: none;
     }
+
+    
 
     nav ul li a::after {
         content: "";
         width: 0;
         height: 2px;
-        background-color: #7e1717;
+        background-color: #eb1616;
         display: block;
         margin: auto;
         transition: 0.5s;
@@ -66,7 +84,7 @@
     .logo {
         font-size: 1.3rem;
         font-weight: 700;
-        color: #7e1717;
+        color: #eb1616;
     }
 
     .nav-links {
@@ -77,12 +95,15 @@
         flex-direction: column;
         gap: 2em;
         padding: min(30vh, 10rem) 2em;
+        background: hsl(0 0% 100% / 0.7);
+        backdrop-filter: blur(1rem);
         transform: translateX(100%);
         transition: transform 350ms ease-out;
     }
 
     .burger {
         cursor: pointer;
+        z-index: 9999;
     }
 
     .bar {
@@ -111,6 +132,9 @@
     }
 
     @media (min-width: 35em) {
+        nav {
+            padding: 2em;
+        }
         .burger {
             display: none;
         }

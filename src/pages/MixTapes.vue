@@ -7,21 +7,30 @@
             <div class="mixtapes">
                 <div class="mixtape">
                     <img src="../assets/img/lovers-rock-mix-2.jpg" alt="lovers rock/reggae">
-                    <p>Lovers Rock/Reggae</p>
-                    <a href="https://hearthis.at/dj-xboy-254-mixes/best-of-lovers-rock-and-reggae-pop-mixes-dj-xboy-254/">Listen</a>
+                    <div class="mixtape__text">
+                        <p>Lovers Rock/Reggae</p>
+                        <a href="https://hearthis.at/dj-xboy-254-mixes/best-of-lovers-rock-and-reggae-pop-mixes-dj-xboy-254/">Listen</a>
+                    </div>
                 </div>
                 <div class="mixtape">
                     <img src="../assets/img/crazy-dancehall-mix-2.jpg" alt="crazy dancehall 2">
-                    <p>Crazy Dancehall Mix 02</p>
-                    <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-bounce-2-dj-xboy-254/">Listen</a>
+                    <div class="mixtape__text">
+                        <p>Crazy Dancehall Mix 02</p>
+                        <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-bounce-2-dj-xboy-254/">Listen</a>
+                    </div>
                 </div>
                 <div class="mixtape">
                     <img src="../assets/img/crazy-dancehall-mix-3jpg.jpg" alt="crazy dancehall 3">
-                    <p>Crazy Dancehall Mix 03</p>
-                    <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-mix-003urban-love/">Listen</a>
+                    <div class="mixtape__text">
+                        <p>Crazy Dancehall Mix 03</p>
+                        <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-mix-003urban-love/">Listen</a>
+                    </div>
                 </div>
             </div>
-            <a href="https://hearthis.at/dj-xboy-254-mixes/">Explore More</a>
+            <div class="explore">
+                <a href="https://hearthis.at/dj-xboy-254-mixes/" >Explore More</a>
+            </div>
+            
         </div>
     </section>
 </template>
@@ -49,15 +58,57 @@
     }
 
     .mixtapes__wrapper {
-        max-width: 1200px;
+        /* max-width: 1200px; */
         padding: 2em 0;
-        margin: auto;
+        
+        background-color: hsl(0 0% 90%);
     }
 
     .mixtapes {
-        
+        max-width: 1200px;
+        margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
     }
+
+    .mixtape {
+        background-color: white;
+    }
+
+    .mixtape p {
+        margin-bottom: 1.5em;
+    }
+
+    .mixtape__text {
+        padding: 1.5em;
+    }
+
+    .mixtape a {
+        color: #eb1616;
+        padding: .5em 1em;
+        text-decoration: none;
+        border: 1px solid #eb1616;
+    }
+
+    .explore {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+    }
+
+    .explore a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #eb1616;
+        padding: .7em 1.4em;
+    }
+
+    @media (max-width: 35em) {
+        .mixtapes {
+            grid-template-columns: 1fr;
+            padding: 0 1em;
+        }
+    }
+    
 </style>

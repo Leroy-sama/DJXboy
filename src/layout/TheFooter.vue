@@ -54,6 +54,10 @@
         margin-top: 2em;
     }
 
+    .footer__head {
+        padding-top: 1em;
+    }
+
     .footer__wrapper {
         max-width: 1200px;
         display: flex;
@@ -98,6 +102,19 @@
 
     .design a:hover {
         color: #7e1717;
+    }
+
+    @media (max-width: 35em) {
+        .footer__links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5em;
+        }
+
+        .footer2 {
+            flex-direction: column;
+            gap: 1em;
+        }
     }
 
 </style>
