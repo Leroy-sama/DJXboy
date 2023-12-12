@@ -8,30 +8,38 @@
                 <h2 class="question">Who am I?</h2>
                 <div class="main-about">
                     <p class="main-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quam, autem dignissimos qui placeat nemo dolorem
-                        suscipit ratione reprehenderit illum amet iure. Ipsam
-                        unde vitae pariatur nulla tenetur quibusdam quas sit?
+                        Dj Xboy The Xtreme is a professional disc jockey , music
+                        producer and a visual-Graphic Editor from Kenya well
+                        known for his well-crafted audio ,video mixes and
+                        interesting intro mashups across most musical genres
+                        expanding the horizon of anyone who listens to him.
                     </p>
                     <img src="" alt="" />
                 </div>
                 <div class="other-about">
                     <p class="other-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum enim, repellendus pariatur tempore assumenda
-                        voluptates, ducimus numquam cumque quod consequatur
-                        reprehenderit tenetur aliquam velit porro sequi nostrum
-                        laudantium quia ratione.
+                        Born in Bungoma, Kenya, At an early age ,he developed a
+                        strong interest in Dancehall ,HipHop, RnB, Kenyan Genge,
+                        Bongo, and Pop at a young age and later on Afrobeat,
+                        Reggae, House Soul & EDM. The art of deejaying was
+                        sparked by listening to reknown deejays and buying CDs
+                        from deejays like Dj Kalonje .With this strong interest
+                        in Music ,He started learning the craft using Virtual DJ
+                        later on in 2017, in 2020 he started Sony Acid & Sony
+                        Vegas with other animation softwares like Blender. Some
+                        of his key influences at the time were DJ Kalonje, Dj
+                        Teeboy ,Dj Bash ,DJ Stone, later on Dj Andie and Dj
+                        puffy (from Barbados).
                     </p>
                     <img src="" alt="" />
                 </div>
                 <div class="other-about">
                     <p class="other-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Earum consectetur eveniet ducimus, facere eaque possimus
-                        quis assumenda ab esse nesciunt. Explicabo doloribus
-                        optio saepe natus deserunt eius voluptate praesentium
-                        assumenda.
+                        He started sharing mixes via WhatsApp and Telegram.He is
+                        also known for mind-blowing word play mashups.He is
+                        known for sharing mixes in Movie shops around Muranga
+                        Town. His mixes are also available on Mixcloud,
+                        Hearthis, Apple Podcasts, and Deezer Podcasts.
                     </p>
                     <img src="" alt="" />
                 </div>
