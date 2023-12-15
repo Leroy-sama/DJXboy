@@ -3,7 +3,8 @@
         <div class="home__intro">
             <div class="home__text">
                 <h1 class="text__heading">
-                    Making unforgettable moments through <span class="red">music</span>
+                    Making unforgettable moments through
+                    <span class="red">music</span>
                 </h1>
                 <p class="text__description">
                     Experience the magic of unforgettable moments, woven
@@ -12,16 +13,16 @@
                 <button class="cta__btn">Explore</button>
             </div>
             <div class="image">
-                <img
-                    src="../assets/img/landing-page-img.jpg"
-                    alt="landing page img"
-                />
+                <img src="../assets/img/the-guy.jpg" alt="landing page img" />
             </div>
         </div>
         <div class="benefits">
+            <div class="benefits__head">
+                <h2 class="the-experience">The Experience</h2>
+            </div>
             <div class="benefit1">
                 <div class="befits__text">
-                    <h2 class="text__title">Elevated Atmosphere</h2>
+                    <h3 class="text__title">Elevated Atmosphere</h3>
                     <p class="text__desc">
                         Transform any occasion with DJXboy, creating an
                         extraordinary atmosphere through carefully curated
@@ -31,16 +32,19 @@
                 <div class="befits__img">
                     <img
                         src="../assets/img/benefits-one-img.jpg"
-                        alt="yesa[]"
+                        alt="yess sirr"
                     />
                 </div>
             </div>
             <div class="benefit2">
                 <div class="befits__img">
-                    <img src="../assets/img/benefits-two-img.jpg" alt="" />
+                    <img
+                        src="../assets/img/benefits-two-img.jpg"
+                        alt="tailored musical journy"
+                    />
                 </div>
                 <div class="befits__text">
-                    <h2 class="text__title">Tailored Musical Journey</h2>
+                    <h3 class="text__title">Tailored Musical Journey</h3>
                     <p class="text__desc">
                         Experience a personalized musical journey with DJXboy,
                         where each track is thoughtfully selected to complement
@@ -50,42 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="testimonials">
-            <div class="testimonial1">
-                <p class="testi__desc">
-                    DJXboy exceeded our expectations, creating an incredible
-                    vibe for our event. The music selection was spot-on,
-                    seamlessly transitioning from one track to the next. Highly recommended for
-                    anyone seeking a top-notch DJ.
-                </p>
-                <div class="details">
-                    <span class="name">Satoru Gojo</span>
-                    <span class="position">Shibuya Inc.</span>
-                </div>
-            </div>
-            <div class="testimonial2">
-                <p class="testi__desc">
-                    At my party, DJXboy came and turned the party up. The
-                    attendees could not get enough of his spectacular skills.
-                </p>
-                <div class="details">
-                    <span class="name">Yuvinalis</span>
-                    <span class="position">Artiste</span>
-                </div>
-            </div>
-            <div class="testimonial3">
-                <p class="testi__desc">
-                    Working with DJXboy was an absolute pleasure. Their
-                    attention to detail and ability to read the crowd set the
-                    perfect tone for our wedding. We couldn't have asked for a better DJ to make
-                    our special day truly unforgettable.
-                </p>
-                <div class="details">
-                    <span class="name">Nikola Jokic</span>
-                    <span class="position">NBA star</span>
-                </div>
-            </div>
-        </div>
+
         <div class="last__cta">
             <h1 class="cta">
                 Ready to elevate your event or party with mixmastery? Book
@@ -112,6 +81,7 @@
     }
 
     .home__intro {
+        height: 90vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -134,7 +104,7 @@
         background-color: #eb1616;
         color: white;
     }
-    
+
     .text__heading,
     .text__description,
     .benefits {
@@ -169,6 +139,26 @@
         gap: 4em;
     }
 
+    .benefits__head {
+        display: flex;
+        justify-content: center;
+    }
+
+    .the-experience {
+        text-align: center;
+        position: relative;
+    }
+
+    .the-experience::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: red;
+    }
+
     .benefit1,
     .benefit2 {
         display: grid;
@@ -177,8 +167,19 @@
         gap: 2em;
     }
 
-    .befits__img img {
+    .befits__img {
         margin: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .befits__img::after {
+        content: "";
+        position: absolute;
+        left: 2em;
+        bottom: 4em;
+        z-index: -1;
+        border: 2px solid red;
     }
 
     .befits__text {
@@ -253,7 +254,7 @@
         }
 
         .befits__text {
-            padding: 0
+            padding: 0;
         }
 
         .testimonials {
