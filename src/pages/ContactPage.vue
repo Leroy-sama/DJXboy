@@ -166,14 +166,15 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 500px;
+        height: 550px;
     }
 
     h1 {
         color: white;
         text-align: center;
         padding: 2em 0;
-        font-size: 3rem;
+        font-size: 4rem;
+        font-family: "Space Mono", monospace;
     }
 
     .fancy-link {

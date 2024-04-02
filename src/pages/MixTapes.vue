@@ -6,37 +6,55 @@
         <div class="mixtapes__wrapper">
             <div class="mixtapes">
                 <div class="mixtape">
-                    <img src="../assets/img/lovers-rock-mix-2.jpg" alt="lovers rock/reggae">
+                    <img
+                        src="../assets/img/lovers-rock-mix-2.jpg"
+                        alt="lovers rock/reggae"
+                    />
                     <div class="mixtape__text">
                         <p>Lovers Rock/Reggae</p>
-                        <a href="https://hearthis.at/dj-xboy-254-mixes/best-of-lovers-rock-and-reggae-pop-mixes-dj-xboy-254/">Listen</a>
+                        <a
+                            href="https://hearthis.at/dj-xboy-254-mixes/best-of-lovers-rock-and-reggae-pop-mixes-dj-xboy-254/"
+                            >Listen</a
+                        >
                     </div>
                 </div>
                 <div class="mixtape">
-                    <img src="../assets/img/crazy-dancehall-mix-2.jpg" alt="crazy dancehall 2">
+                    <img
+                        src="../assets/img/crazy-dancehall-mix-2.jpg"
+                        alt="crazy dancehall 2"
+                    />
                     <div class="mixtape__text">
                         <p>Crazy Dancehall Mix 02</p>
-                        <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-bounce-2-dj-xboy-254/">Listen</a>
+                        <a
+                            href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-bounce-2-dj-xboy-254/"
+                            >Listen</a
+                        >
                     </div>
                 </div>
                 <div class="mixtape">
-                    <img src="../assets/img/crazy-dancehall-mix-3jpg.jpg" alt="crazy dancehall 3">
+                    <img
+                        src="../assets/img/crazy-dancehall-mix-3jpg.jpg"
+                        alt="crazy dancehall 3"
+                    />
                     <div class="mixtape__text">
                         <p>Crazy Dancehall Mix 03</p>
-                        <a href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-mix-003urban-love/">Listen</a>
+                        <a
+                            href="https://hearthis.at/dj-xboy-254-mixes/crazy-dancehall-mix-003urban-love/"
+                            >Listen</a
+                        >
                     </div>
                 </div>
             </div>
             <div class="explore">
-                <a href="https://hearthis.at/dj-xboy-254-mixes/" >Explore More</a>
+                <a href="https://hearthis.at/dj-xboy-254-mixes/"
+                    >Explore More</a
+                >
             </div>
-            
         </div>
     </section>
 </template>
 
 <style scoped>
-
     img {
         width: 100%;
     }
@@ -55,12 +73,14 @@
     .sect-title h1 {
         color: white;
         font-size: 2rem;
+        font-family: "Space Mono", monospace;
+        font-size: 4rem;
     }
 
     .mixtapes__wrapper {
         /* max-width: 1200px; */
         padding: 2em 0;
-        
+
         background-color: hsl(0 0% 90%);
     }
 
@@ -86,7 +106,7 @@
 
     .mixtape a {
         color: #eb1616;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
         text-decoration: none;
         border: 1px solid #eb1616;
     }
@@ -101,7 +121,7 @@
         text-decoration: none;
         color: #fff;
         background-color: #eb1616;
-        padding: .7em 1.4em;
+        padding: 0.7em 1.4em;
     }
 
     @media (max-width: 35em) {
@@ -110,5 +130,4 @@
             padding: 0 1em;
         }
     }
-    
 </style>

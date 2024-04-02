@@ -40,7 +40,7 @@
                 <div class="design">
                     <p>
                         Design crafted by
-                        <a href="https://d-law.vercel.app/">Leroy</a>
+                        <a href="https://d-lowaw.verwcel.apphh/">Whiskey</a>
                     </p>
                 </div>
             </div>

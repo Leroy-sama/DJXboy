@@ -20,37 +20,39 @@
             <div class="benefits__head">
                 <h2 class="the-experience">The Experience</h2>
             </div>
-            <div class="benefit1">
-                <div class="befits__text">
-                    <h3 class="text__title">Elevated Atmosphere</h3>
-                    <p class="text__desc">
-                        Transform any occasion with DJXboy, creating an
-                        extraordinary atmosphere through carefully curated
-                        playlists and seamless mixes.
-                    </p>
+            <div class="benefits__wrapper">
+                <div class="benefit1">
+                    <div class="befits__img">
+                        <img
+                            src="../assets/img/benefits-one-img.jpg"
+                            alt="yess sirr"
+                        />
+                    </div>
+                    <div class="befits__text">
+                        <h3 class="text__title">Elevated Atmosphere</h3>
+                        <p class="text__desc">
+                            Transform any occasion with DJXboy, creating an
+                            extraordinary atmosphere through carefully curated
+                            playlists and seamless mixes.
+                        </p>
+                    </div>
                 </div>
-                <div class="befits__img">
-                    <img
-                        src="../assets/img/benefits-one-img.jpg"
-                        alt="yess sirr"
-                    />
-                </div>
-            </div>
-            <div class="benefit2">
-                <div class="befits__img">
-                    <img
-                        src="../assets/img/benefits-two-img.jpg"
-                        alt="tailored musical journy"
-                    />
-                </div>
-                <div class="befits__text">
-                    <h3 class="text__title">Tailored Musical Journey</h3>
-                    <p class="text__desc">
-                        Experience a personalized musical journey with DJXboy,
-                        where each track is thoughtfully selected to complement
-                        your event's mood, ensuring a distinctive and memorable
-                        celebration
-                    </p>
+                <div class="benefit2">
+                    <div class="befits__img">
+                        <img
+                            src="../assets/img/benefits-two-img.jpg"
+                            alt="tailored musical journy"
+                        />
+                    </div>
+                    <div class="befits__text">
+                        <h3 class="text__title">Tailored Musical Journey</h3>
+                        <p class="text__desc">
+                            Experience a personalized musical journey with
+                            DJXboy, where each track is thoughtfully selected to
+                            complement your event's mood, ensuring a distinctive
+                            and memorable celebration
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,13 +77,8 @@
         margin: auto;
     }
 
-    .befits__img {
-        display: grid;
-        place-content: center;
-    }
-
     .home__intro {
-        height: 90vh;
+        /* height: 90vh; */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -112,7 +109,7 @@
     }
 
     .text__title {
-        padding-bottom: 1em;
+        /* padding-bottom: 1em;  */
     }
 
     .text__description {
@@ -139,6 +136,11 @@
         gap: 4em;
     }
 
+    .benefits__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     .benefits__head {
         display: flex;
         justify-content: center;
@@ -159,20 +161,6 @@
         background-color: red;
     }
 
-    .benefit1,
-    .benefit2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 2em;
-    }
-
-    .befits__img {
-        margin: auto;
-        position: relative;
-        z-index: 1;
-    }
-
     .befits__img::after {
         content: "";
         position: absolute;
@@ -180,10 +168,6 @@
         bottom: 4em;
         z-index: -1;
         border: 2px solid red;
-    }
-
-    .befits__text {
-        padding: 2em;
     }
 
     .testimonials {
@@ -236,9 +220,10 @@
     }
 
     @media (max-width: 35em) {
-        .image img {
-            display: none;
+        .home__intro {
+            flex-direction: column-reverse;
         }
+
         .benefit1 {
             display: flex;
             flex-direction: column;

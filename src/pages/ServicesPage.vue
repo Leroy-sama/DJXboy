@@ -1,12 +1,14 @@
+import { RouterLink } from 'vue-router';
 <template>
     <section class="services-sect">
         <div class="section__wrappper">
-
             <div class="heading">
-                <h1 class="services__heading">Dj Services provided</h1>
+                <h1 class="services__heading">
+                    Our <span class="x-services">Services</span>
+                </h1>
             </div>
             <div class="services">
-                <div class="service">
+                <!-- <div class="service">
                     <img src="../assets/img/roadshow-img.jpg" alt="roadshow" />
                     <div class="service__text">
                         <h3 class="text__head">Roadshows</h3>
@@ -18,33 +20,40 @@
                             memories.
                         </p>
                     </div>
-                </div>
+                </div> -->
                 <div class="service">
-                    <img src="../assets/img/birthday.jpg" alt="birthday party" />
+                    <img
+                        src="../assets/img/birthday.jpg"
+                        alt="birthday party"
+                    />
                     <div class="service__text">
                         <h3 class="text__head">Birthday Party</h3>
                         <p class="text__desc">
-                            Embark on an unforgettable musical journey with [DJ's
-                            Name], not just at clubs and festivals, but right in the
-                            heart of your celebrations! Elevate your birthday party
-                            to new heights with our exclusive DJ services.
+                            Embark on an unforgettable musical journey with
+                            [DJ's Name], not just at clubs and festivals, but
+                            right in the heart of your celebrations! Elevate
+                            your birthday party to new heights with our
+                            exclusive DJ services.
                         </p>
                     </div>
                 </div>
                 <div class="service">
-                    <img src="../assets/img/cooperate.jpg" alt="coperate event" />
+                    <img
+                        src="../assets/img/cooperate.jpg"
+                        alt="coperate event"
+                    />
                     <div class="service__text">
                         <h3 class="text__head">Coperate Events</h3>
                         <p class="text__desc">
-                            We specialize in transforming corporate gatherings into
-                            vibrant, energetic experiences. Elevate your corporate
-                            events to a whole new level with the seamless blend of
-                            professionalism and pulsating beats brought to you by
-                            DJXboy.
+                            We specialize in transforming corporate gatherings
+                            into vibrant, energetic experiences. Elevate your
+                            corporate events to a whole new level with the
+                            seamless blend of professionalism and pulsating
+                            beats brought to you by DJXboy.
                         </p>
                     </div>
                 </div>
-                <div class="service">
+                <!-- <div class="service">
                     <img src="../assets/img/kids-party.jpg" alt="kids party" />
                     <div class="service__text">
                         <h3 class="text__head">Kids Parties</h3>
@@ -55,24 +64,49 @@
                             with joy, laughter, and, of course, fantastic music.
                         </p>
                     </div>
-                </div>
+                </div> -->
                 <div class="service">
                     <img src="../assets/img/wedding.jpg" alt="wedding" />
                     <div class="service__text">
                         <h3 class="text__head">Weddings</h3>
                         <p class="text__desc">
-                            Celebrate love in style with [DJ's Name] as the maestro
-                            of your wedding day! Our wedding DJ services are
-                            designed to make your special day even more memorable,
-                            with carefully curated playlists that capture the
-                            essence of your love story.
+                            Celebrate love in style with [DJ's Name] as the
+                            maestro of your wedding day! Our wedding DJ services
+                            are designed to make your special day even more
+                            memorable, with carefully curated playlists that
+                            capture the essence of your love story.
                         </p>
                     </div>
                 </div>
             </div>
+            <div class="flex">
+                <RouterLink class="schedule" to="/contact"
+                    ><span>Schedule</span>
+                    <Icon
+                        icon="maki:arrow"
+                        :color="isHovered ? '#fff' : '#eb1616'"
+                        width="30"
+                        @mouseOver="handleMouseOver"
+                        @mouseOut="handleMouseOut"
+                    />
+                </RouterLink>
+            </div>
         </div>
     </section>
 </template>
+
+<script setup>
+    import { ref } from "vue";
+    import { Icon } from "@iconify/vue";
+
+    const handleMouseOver = () => {
+        isHovered.value = true;
+    };
+
+    const handleMouseOut = () => {
+        isHovered.value = false;
+    };
+</script>
 
 <style scoped>
     img {
@@ -80,7 +114,8 @@
     }
 
     .heading {
-        background: linear-gradient(45deg, black, transparent), url(../assets/img/service-provided.jpg);
+        background: linear-gradient(45deg, black, transparent),
+            url(../assets/img/service-provided.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -93,10 +128,16 @@
     .services__heading {
         color: #fff;
         font-size: 1.5rem;
+        font-size: 4rem;
+        font-family: "Space Mono", monospace;
+    }
+
+    .x-services {
+        color: salmon;
     }
 
     .services {
-        padding: 0 2em ;
+        padding: 0 2em;
     }
 
     .service {
@@ -114,6 +155,33 @@
 
     .text__desc {
         padding: 1em 0;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .schedule {
+        border: 1px solid #eb1616;
+        text-decoration: none;
+        color: #eb1616;
+        background-color: white;
+        padding: 1em 2em;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .schedule:hover {
+        color: white;
+        background-color: #eb1616;
+        cursor: pointer;
+    }
+
+    .schedule:hover Icon {
+        color: white;
     }
 
     @media (max-width: 35em) {

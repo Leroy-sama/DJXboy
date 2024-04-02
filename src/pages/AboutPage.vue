@@ -1,7 +1,7 @@
 <template>
     <section id="about">
         <div class="intro">
-            <h1>About DJXboy</h1>
+            <h1>About <span class="x-span">DJXboy</span></h1>
         </div>
         <div class="about__section">
             <div class="section__wrapper">
@@ -52,18 +52,19 @@
 </template>
 
 <style scoped>
+    * {
+        line-height: 1.5;
+    }
+
     img {
         width: 100%;
     }
 
-    #about {
+    .section__wrapper {
+        padding: 1em;
         max-width: 1200px;
         width: 100%;
         margin: auto;
-    }
-
-    .section__wrapper {
-        padding: 1em;
     }
     .intro {
         background: linear-gradient(45deg, black, transparent),
@@ -80,7 +81,12 @@
     .intro h1 {
         color: #fff;
         text-align: center;
-        font-size: 2rem;
+        font-size: 4rem;
+        font-family: "Space Mono", monospace;
+    }
+
+    .x-span {
+        color: salmon;
     }
 
     .about-cta a {

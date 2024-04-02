@@ -1,4 +1,5 @@
 <script setup>
+    import { Icon } from "@iconify/vue";
     import { reactive } from "vue";
 
     const state = reactive({
@@ -10,29 +11,42 @@
     };
 
     const closeNavMenu = () => {
-        state.isActive = false
-    }
+        state.isActive = false;
+    };
 </script>
 
 <template>
     <header>
         <nav>
-            <RouterLink to="/" class="logo">DJXboy</RouterLink>
+            <RouterLink to="/" class="logo"
+                ><span>DJ Xboy</span
+                ><Icon icon="material-symbols:star" color="#eb1616" width="30"
+            /></RouterLink>
             <ul class="nav-links" :class="{ active: state.isActive }">
                 <li>
-                    <RouterLink to="/home" @click.native="closeNavMenu" >Home</RouterLink>
+                    <RouterLink to="/home" @click.native="closeNavMenu"
+                        >Home</RouterLink
+                    >
                 </li>
                 <li>
-                    <RouterLink to="/about" @click.native="closeNavMenu" >About</RouterLink>
+                    <RouterLink to="/about" @click.native="closeNavMenu"
+                        >About</RouterLink
+                    >
+                </li>
+                <!-- <li>
+                    <RouterLink to="/services" @click.native="closeNavMenu"
+                        >Services</RouterLink
+                    >
+                </li> -->
+                <li>
+                    <RouterLink to="/mixtapes" @click.native="closeNavMenu"
+                        >MixTapes</RouterLink
+                    >
                 </li>
                 <li>
-                    <RouterLink to="/services" @click.native="closeNavMenu" >Services</RouterLink>
-                </li>
-                <li>
-                    <RouterLink to="/mixtapes" @click.native="closeNavMenu" >MixTapes</RouterLink>
-                </li>
-                <li>
-                    <RouterLink to="/contact" @click.native="closeNavMenu" >Contact</RouterLink>
+                    <RouterLink to="/contact" @click.native="closeNavMenu"
+                        >Contact</RouterLink
+                    >
                 </li>
             </ul>
             <div
@@ -62,9 +76,8 @@
     nav a {
         color: rgb(2, 2, 12);
         text-decoration: none;
+        font-size: 1.2rem;
     }
-
-    
 
     nav ul li a::after {
         content: "";
@@ -85,6 +98,8 @@
         font-size: 1.3rem;
         font-weight: 700;
         color: #eb1616;
+        display: flex;
+        /* align-items: center; */
     }
 
     .nav-links {
