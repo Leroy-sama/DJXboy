@@ -33,7 +33,7 @@
             <div class="footer2">
                 <div class="copyright">
                     <p>
-                        Copyright &#169 2023 Xboy
+                        Copyright &#169 2024 DjXboy
                     </p>
                     <p>All right reserved</p>
                 </div>

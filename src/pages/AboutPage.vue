@@ -72,7 +72,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 500px;
+        height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;

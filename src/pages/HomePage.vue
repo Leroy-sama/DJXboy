@@ -1,16 +1,19 @@
+import { RouterLink } from 'vue-router'; import { RouterLink } from
+'vue-router';
 <template>
     <section id="home">
         <div class="home__intro">
             <div class="home__text">
                 <h1 class="text__heading">
-                    Making unforgettable moments through
+                    Making unforgettable
+                    <span class="grad">moments</span> through
                     <span class="red">music</span>
                 </h1>
                 <p class="text__description">
                     Experience the magic of unforgettable moments, woven
                     together by the mix-mastery of music.
                 </p>
-                <button class="cta__btn">Explore</button>
+                <RouterLink to="/mixtapes" class="cta__btn">Explore</RouterLink>
             </div>
             <div class="image">
                 <img src="../assets/img/the-guy.jpg" alt="landing page img" />
@@ -22,37 +25,36 @@
             </div>
             <div class="benefits__wrapper">
                 <div class="benefit1">
-                    <div class="befits__img">
-                        <img
-                            src="../assets/img/benefits-one-img.jpg"
-                            alt="yess sirr"
-                        />
-                    </div>
-                    <div class="befits__text">
-                        <h3 class="text__title">Elevated Atmosphere</h3>
-                        <p class="text__desc">
-                            Transform any occasion with DJXboy, creating an
-                            extraordinary atmosphere through carefully curated
-                            playlists and seamless mixes.
-                        </p>
-                    </div>
+                    <img
+                        src="../assets/img/benefits-one-img.jpg"
+                        alt="yess sirr"
+                    />
+
+                    <h3 class="text__title">Elevated Atmosphere</h3>
+                    <p class="text__desc">
+                        Transform any occasion with DJXboy, creating an
+                        extraordinary atmosphere through carefully curated
+                        playlists and seamless mixes.
+                    </p>
+                    <RouterLink class="text-link" to="/mixtapes"
+                        >Explore Mixtapes</RouterLink
+                    >
                 </div>
                 <div class="benefit2">
-                    <div class="befits__img">
-                        <img
-                            src="../assets/img/benefits-two-img.jpg"
-                            alt="tailored musical journy"
-                        />
-                    </div>
-                    <div class="befits__text">
-                        <h3 class="text__title">Tailored Musical Journey</h3>
-                        <p class="text__desc">
-                            Experience a personalized musical journey with
-                            DJXboy, where each track is thoughtfully selected to
-                            complement your event's mood, ensuring a distinctive
-                            and memorable celebration
-                        </p>
-                    </div>
+                    <img
+                        src="../assets/img/benefits-two-img.jpg"
+                        alt="tailored musical journy"
+                    />
+                    <h3 class="text__title">Tailored Musical Journey</h3>
+                    <p class="text__desc">
+                        Experience a personalized musical journey with DJXboy,
+                        where each track is thoughtfully selected to complement
+                        your event's mood, ensuring a distinctive and memorable
+                        celebration
+                    </p>
+                    <RouterLink class="text-link" to="/mixtapes"
+                        >Explore Mixtapes <Icon icon="maki:arrow" width="30"
+                    /></RouterLink>
                 </div>
             </div>
         </div>
@@ -62,7 +64,7 @@
                 Ready to elevate your event or party with mixmastery? Book
                 DJXboy, NOW!
             </h1>
-            <RouterLink class="last__btn" to="/">Services</RouterLink>
+            <RouterLink class="last__btn" to="/contact">Contact</RouterLink>
         </div>
     </section>
 </template>
@@ -92,24 +94,21 @@
         font-size: 2rem;
     }
 
-    img {
-        width: 100%;
-        max-width: 400px;
+    .grad {
+        color: blue;
     }
 
     .red {
         background-color: #eb1616;
         color: white;
+        font-family: "Space Mono", monospace;
+        line-height: 1.5;
     }
 
     .text__heading,
     .text__description,
     .benefits {
         color: rgb(2, 2, 12);
-    }
-
-    .text__title {
-        /* padding-bottom: 1em;  */
     }
 
     .text__description {
@@ -123,6 +122,7 @@
         border: 1px solid #eb1616;
         cursor: pointer;
         font-size: 1rem;
+        text-decoration: none;
     }
 
     .cta__btn:hover {
@@ -130,25 +130,61 @@
         background-color: #eb1616;
     }
 
-    .benefits {
-        padding: 2em;
-        display: grid;
-        gap: 4em;
-    }
-
     .benefits__wrapper {
+        padding: 2em 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .text__title {
+        font-size: 2rem;
+        color: var(--darkReddish);
+    }
+
+    .text__desc {
+        color: var(--myBlack);
+        font-size: 1.1rem;
+        padding: 1em 0;
+    }
+
+    .text-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--myBlack);
+        font-weight: 700;
+        position: relative;
+    }
+
+    .text-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--darkReddish);
+
+        transform: scaleX(0.4);
+        transform-origin: left;
+        transition: transform 350ms ease-in;
+    }
+
+    .text-link:hover::after {
+        transform: scaleX(1);
     }
 
     .benefits__head {
         display: flex;
         justify-content: center;
+        padding: 2em 0;
     }
 
     .the-experience {
         text-align: center;
         position: relative;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
 
     .the-experience::after {
@@ -159,41 +195,6 @@
         width: 100%;
         height: 4px;
         background-color: red;
-    }
-
-    .befits__img::after {
-        content: "";
-        position: absolute;
-        left: 2em;
-        bottom: 4em;
-        z-index: -1;
-        border: 2px solid red;
-    }
-
-    .testimonials {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2em;
-        padding: 4em;
-    }
-
-    .testimonial1,
-    .testimonial2,
-    .testimonial3 {
-        border: 1px solid #eb161680;
-        padding: 1.5em;
-        color: rgb(2, 2, 12);
-    }
-
-    .details {
-        padding: 1em 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .details .name {
-        font-size: 1.2rem;
-        font-weight: 700;
     }
 
     .last__cta {
@@ -222,28 +223,6 @@
     @media (max-width: 35em) {
         .home__intro {
             flex-direction: column-reverse;
-        }
-
-        .benefit1 {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .benefit2 {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-
-        .testimonials {
-            grid-template-columns: 1fr;
-        }
-
-        .befits__text {
-            padding: 0;
-        }
-
-        .testimonials {
-            padding: 1em;
         }
 
         .cta {
