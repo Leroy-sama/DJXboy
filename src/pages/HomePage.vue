@@ -59,6 +59,44 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
             </div>
         </div>
 
+        <div class="services">
+            <div class="services__wrapper">
+                <div class="service">
+                    <h3>Service 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsa, ex illo ipsam sed molestiae incidunt obcaecati
+                        laborum commodi quos numquam voluptate, unde quibusdam
+                        repellat dicta similique tempore ducimus possimus
+                        necessitatibus.
+                    </p>
+                    <a href="#">Book</a>
+                </div>
+                <div class="service">
+                    <h3>Service 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Possimus, a! Aperiam aliquam optio itaque
+                        similique quaerat sint quasi quas nemo, esse adipisci
+                        officia provident aut, dolore eaque praesentium,
+                        consequuntur aliquid!
+                    </p>
+                    <a href="#">Book</a>
+                </div>
+                <div class="service">
+                    <h3>Service 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempora voluptate recusandae rem? Itaque ipsa corporis
+                        sint aut nihil, voluptate placeat assumenda? Consectetur
+                        illum quo inventore debitis voluptatum ad saepe
+                        accusamus.
+                    </p>
+                    <a href="#">Book</a>
+                </div>
+            </div>
+        </div>
+
         <div class="last__cta">
             <h1 class="cta">
                 Ready to elevate your event or party with mixmastery? Book
@@ -195,6 +233,33 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
         width: 100%;
         height: 4px;
         background-color: red;
+    }
+
+    .services__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+
+    .service {
+        border: 1px solid rgb(122, 0, 0);
+        padding: 2em;
+    }
+
+    .service h3 {
+        color: rgb(122, 0, 0);
+    }
+
+    .service p {
+        margin-bottom: 2em;
+    }
+
+    .service a {
+        border: 1px solid rgb(122, 0, 0);
+        text-decoration: none;
+        color: white;
+        background-color: rgb(122, 0, 0);
+        padding: 0.5em 1em;
     }
 
     .last__cta {

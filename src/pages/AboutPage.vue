@@ -5,7 +5,7 @@
         </div>
         <div class="about__section">
             <div class="section__wrapper">
-                <h2 class="question">Who am I?</h2>
+                <h2 class="question">Who is DjXboy?</h2>
                 <div class="main-about">
                     <p class="main-desc">
                         Dj Xboy The Xtreme is a professional disc jockey , music
@@ -66,6 +66,11 @@
         width: 100%;
         margin: auto;
     }
+
+    .question {
+        color: rgb(105, 11, 0);
+    }
+
     .intro {
         background: linear-gradient(45deg, black, transparent),
             url(../assets/img/homepage-img1.jpg);
