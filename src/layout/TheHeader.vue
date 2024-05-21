@@ -76,7 +76,7 @@
     nav a {
         color: rgb(2, 2, 12);
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     nav ul li a::after {

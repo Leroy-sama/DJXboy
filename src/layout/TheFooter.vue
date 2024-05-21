@@ -40,7 +40,7 @@
                 <div class="design">
                     <p>
                         Design crafted by
-                        <a href="https://d-lowaw.verwcel.apphh/">Whiskey</a>
+                        <a href="https://d-lowaw.verwcel.apphh/">Riroi</a>
                     </p>
                 </div>
             </div>

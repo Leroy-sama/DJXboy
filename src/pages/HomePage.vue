@@ -1,5 +1,3 @@
-import { RouterLink } from 'vue-router'; import { RouterLink } from
-'vue-router';
 <template>
     <section id="home">
         <div class="home__intro">
@@ -60,39 +58,36 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
         </div>
 
         <div class="services">
+            <div class="benefits__head">
+                <h2 class="the-experience">My Services</h2>
+            </div>
             <div class="services__wrapper">
                 <div class="service">
                     <h3>Service 1</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Ipsa, ex illo ipsam sed molestiae incidunt obcaecati
-                        laborum commodi quos numquam voluptate, unde quibusdam
-                        repellat dicta similique tempore ducimus possimus
-                        necessitatibus.
+                        laborum commodi quos numquam voluptate,
                     </p>
-                    <a href="#">Book</a>
+                    <RouterLink to="/contact">Book</RouterLink>
                 </div>
                 <div class="service">
                     <h3>Service 2</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Possimus, a! Aperiam aliquam optio itaque
-                        similique quaerat sint quasi quas nemo, esse adipisci
-                        officia provident aut, dolore eaque praesentium,
-                        consequuntur aliquid!
+                        similique quaerat sint quasi quas nemo,
                     </p>
-                    <a href="#">Book</a>
+                    <RouterLink to="/contact">Book</RouterLink>
                 </div>
                 <div class="service">
                     <h3>Service 3</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Tempora voluptate recusandae rem? Itaque ipsa corporis
-                        sint aut nihil, voluptate placeat assumenda? Consectetur
-                        illum quo inventore debitis voluptatum ad saepe
-                        accusamus.
+                        sint aut nihil, voluptate placeat assumenda? accusamus.
                     </p>
-                    <a href="#">Book</a>
+                    <RouterLink to="/contact">Book</RouterLink>
                 </div>
             </div>
         </div>
@@ -133,11 +128,11 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
     }
 
     .grad {
-        color: blue;
+        color: var(--iconsRed);
     }
 
     .red {
-        background-color: #eb1616;
+        background-color: var(--iconsRed);
         color: white;
         font-family: "Space Mono", monospace;
         line-height: 1.5;
@@ -154,10 +149,10 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
     }
 
     .cta__btn {
-        color: #eb1616;
+        color: var(--iconsRed);
         background-color: white;
         padding: 0.5em 1.6em;
-        border: 1px solid #eb1616;
+        border: 1px solid var(--iconsRed);
         cursor: pointer;
         font-size: 1rem;
         text-decoration: none;
@@ -165,7 +160,7 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
 
     .cta__btn:hover {
         color: white;
-        background-color: #eb1616;
+        background-color: var(--iconsRed);
     }
 
     .benefits__wrapper {
@@ -232,7 +227,7 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: red;
+        background-color: var(--iconsRed);
     }
 
     .services__wrapper {
@@ -242,16 +237,25 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
     }
 
     .service {
-        border: 1px solid rgb(122, 0, 0);
+        border: 1px solid var(---color1);
+        background-color: var(---color1);
         padding: 2em;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .service:hover {
+        border: 1px solid rgb(122, 0, 0);
+        scale: 1.01;
     }
 
     .service h3 {
         color: rgb(122, 0, 0);
+        font-size: 1.3rem;
     }
 
     .service p {
-        margin-bottom: 2em;
+        padding: 1em 0 2em;
+        color: var(--myBlack);
     }
 
     .service a {
@@ -267,22 +271,24 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        padding: 2em;
     }
     .cta {
         max-width: 500px;
         text-align: center;
+        padding-bottom: 1em;
     }
 
     .last__btn {
-        color: #eb1616;
+        color: var(--iconsRed);
         text-decoration: none;
         padding: 0.5em 1.6em;
-        border: 1px solid #eb1616;
+        border: 1px solid var(--iconsRed);
     }
 
     .last__btn:hover {
         color: white;
-        background-color: #eb1616;
+        background-color: var(--iconsRed);
     }
 
     @media (max-width: 35em) {
@@ -292,6 +298,16 @@ import { RouterLink } from 'vue-router'; import { RouterLink } from
 
         .cta {
             font-size: 1.5rem;
+        }
+
+        .services__wrapper {
+            grid-template-columns: 1fr;
+            margin: 0 1em;
+        }
+
+        .benefits__wrapper {
+            grid-template-columns: 1fr;
+            margin: 0 1em;
         }
     }
 </style>
