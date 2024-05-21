@@ -67,8 +67,8 @@
         <div class="contact__section">
             <div class="section__wrapper">
                 <div class="contact__text">
-                    <h3>Talk to Xboy</h3>
-                    <p>
+                    <h3 class="text__head">Talk to Xboy</h3>
+                    <p class="email-me">
                         Please email me at
                         <a
                             class="fancy-link one"
@@ -87,8 +87,8 @@
                     </p>
                 </div>
                 <div class="contact__form">
-                    <h3>Contact Form</h3>
-                    <form action="" @submit.prevent="submitForm">
+                    <h3 class="form-h3">Contact Form</h3>
+                    <form @submit.prevent="submitForm">
                         <div
                             class="form-control"
                             :class="{ invalid: !name.isValid }"
@@ -162,11 +162,11 @@
 
 <style scoped>
     .foot__heading {
-        background: url(../assets/img/contact-me.jpg);
+        background: url(https://img.freepik.com/free-photo/shot-yellow-gray-payphone_181624-2389.jpg?t=st=1716306404~exp=1716310004~hmac=b186ab23d5d26ffa0cd948108879cf358348dc111b50216676350156d1ca32e5&w=740);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 550px;
+        height: 400px;
     }
 
     h1 {
@@ -177,9 +177,23 @@
         font-family: "Space Mono", monospace;
     }
 
+    .text__head,
+    .form-h3 {
+        color: var(--iconsRed);
+        font-size: 1.5rem;
+    }
+
+    .form-h3 {
+        padding: 1em 0;
+    }
+
+    .email-me {
+        padding: 1em 0;
+    }
+
     .fancy-link {
         text-decoration: none;
-        color: #eb1616;
+        color: var(--iconsRed);
         position: relative;
     }
 
@@ -221,17 +235,17 @@
 
     button {
         margin-top: 1em;
-        color: #eb1616;
+        color: var(--iconsRed);
         font-size: 1rem;
         background-color: white;
         padding: 0.7em 1.5em;
         cursor: pointer;
-        border: 1px solid #eb1616;
+        border: 1px solid var(--iconsRed);
     }
 
     button:hover {
-        border: none;
-        border-bottom: 1px solid #eb1616;
+        border: 1px solid white;
+        border-bottom: 1px solid var(--iconsRed);
     }
 
     .invalid input {
@@ -249,6 +263,10 @@
             grid-template-columns: 1fr;
             padding: 1em;
             gap: 1.5em;
+        }
+
+        .foot__heading h1 {
+            font-size: 2rem;
         }
     }
 </style>

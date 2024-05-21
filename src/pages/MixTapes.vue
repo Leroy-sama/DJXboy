@@ -61,7 +61,7 @@
 
     .sect-title {
         background: url(../assets/img/mixtapes.jpg);
-        height: 500px;
+        height: 400px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -72,7 +72,6 @@
 
     .sect-title h1 {
         color: white;
-        font-size: 2rem;
         font-family: "Space Mono", monospace;
         font-size: 4rem;
     }
@@ -105,10 +104,10 @@
     }
 
     .mixtape a {
-        color: #eb1616;
+        color: var(--iconsRed);
         padding: 0.5em 1em;
         text-decoration: none;
-        border: 1px solid #eb1616;
+        border: 1px solid var(--iconsRed);
     }
 
     .explore {
@@ -120,7 +119,7 @@
     .explore a {
         text-decoration: none;
         color: #fff;
-        background-color: #eb1616;
+        background-color: var(--iconsRed);
         padding: 0.7em 1.4em;
     }
 
@@ -128,6 +127,10 @@
         .mixtapes {
             grid-template-columns: 1fr;
             padding: 0 1em;
+        }
+
+        .sect-title h1 {
+            font-size: 2rem;
         }
     }
 </style>

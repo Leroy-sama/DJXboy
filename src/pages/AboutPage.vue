@@ -108,4 +108,10 @@
         background-color: #fff;
         color: #7e1717;
     }
+
+    @media (max-width: 35em) {
+        .intro h1 {
+            font-size: 2.5rem;
+        }
+    }
 </style>
