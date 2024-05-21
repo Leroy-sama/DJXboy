@@ -15,32 +15,55 @@ const routes = [
     {
         path: "/home",
         component: HomePage,
+        meta: {
+            title: "Home",
+        },
     },
     {
         path: "/about",
         component: AboutPage,
+        meta: {
+            title: "About",
+        },
     },
     {
         path: "/services",
         component: ServicesPage,
+        meta: {
+            title: "Services",
+        },
     },
     {
         path: "/mixtapes",
         component: MixTapes,
+        meta: {
+            title: "Mixtapes",
+        },
     },
     {
         path: "/contact",
         component: ContactPage,
+        meta: {
+            title: "Contact",
+        },
     },
     {
         path: "/:notFound(.*)",
         component: NotFound,
+        meta: {
+            title: "Not Found",
+        },
     },
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    document.title = `${to.meta.title} | DJ Xboy`;
+    next();
 });
 
 export default router;
