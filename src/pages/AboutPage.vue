@@ -20,7 +20,7 @@
                         </div>
                         <img src="@/assets/img/about1-image.jpg" alt="" />
                     </div>
-                    <div class="other-about">
+                    <div class="second-about">
                         <img src="@/assets/img/childhood-image.jpg" alt="" />
                         <div class="description">
                             <h2 class="question">The Journey</h2>
@@ -118,14 +118,16 @@
     }
 
     .main-about,
-    .other-about {
+    .other-about,
+    .second-about {
         display: flex;
         align-items: center;
         gap: 2em;
     }
 
     .main-about img,
-    .other-about img {
+    .other-about img,
+    .second-about img {
         max-width: 600px;
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -153,6 +155,21 @@
     @media (max-width: 35em) {
         .intro h1 {
             font-size: 2.5rem;
+        }
+
+        .section__wrapper {
+            padding: 0 1em;
+        }
+
+        .main-about,
+        .other-about {
+            flex-direction: column-reverse;
+            gap: 1em;
+        }
+
+        .second-about {
+            flex-direction: column;
+            gap: 1em;
         }
     }
 </style>
